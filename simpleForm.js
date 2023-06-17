@@ -11,11 +11,21 @@ if (nameRegex.test(text.value))
 const email = document.querySelector('#email');
 const emailError = document.querySelector('.email-error');
 email.addEventListener('input', function() {
-let emailRegex = RegExp(('^[0-9a-z]+([+.-]([a-z0-9]+))*[@][a-z]+[.][a-z]{2,4}([.][a-z]{2,4})?$'));
+let emailRegex = RegExp('^[0-9a-z]+([+.-]([a-z0-9]+))*[@][a-z]+[.][a-z]{2,4}([.][a-z]{2,4})?$');
 if (emailRegex.test(email.value)) 
     emailError.textContent = "";
  else 
     emailError.textContent = "Invalid Email Address";
+});
+
+const phoneNumber = document.querySelector('#tel');
+const numberError = document.querySelector('.tel-error');
+phoneNumber.addEventListener('input', function(){
+let numberRegex = RegExp('^\\d{1,3}\s\\d{10})$');
+if (numberRegex.test(phoneNumber.value))
+    numberError.textContent = " ";
+ else 
+    numberError.textContent = "Invalid Phone Number";
 });
 
 const salary = document.querySelector('#salary');
