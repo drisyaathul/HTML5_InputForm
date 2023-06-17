@@ -18,14 +18,6 @@ if (emailRegex.test(email.value))
     emailError.textContent = "Invalid Email Address";
 });
 
-const phoneNumber = document.querySelector('#tel');
-const numberError = document.querySelector('.tel-error');
-phoneNumber.addEventListener('input', function(){
-let numberRegex = RegExp("^[91][0-9]{10}$");
-if (numberRegex.test(phoneNumber.value))
-    numberError.textContent = " ";
- else 
-    numberError.textContent = "Invalid Phone Number";
-});
+
 
 
