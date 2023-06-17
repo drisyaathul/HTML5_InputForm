@@ -19,5 +19,3 @@ if (emailRegex.test(email.value))
 });
 
 
-
-
