@@ -11,7 +11,7 @@ if (nameRegex.test(text.value))
 const email = document.querySelector('#email');
 const emailError = document.querySelector('.email-error');
 email.addEventListener('input', function() {
-let emailRegex = RegExp('^[0-9a-z]+([+.-]([a-z0-9]+))*[@][a-z]+[.][a-z]{2,4}([.][a-z]{2,4})?$');
+let emailRegex = RegExp("^[0-9a-z]+([+.-]([a-z0-9]+))*[@][a-z]+[.][a-z]{2,4}([.][a-z]{2,4})?$");
 if (emailRegex.test(email.value)) 
     emailError.textContent = "";
  else 
@@ -21,16 +21,20 @@ if (emailRegex.test(email.value))
 const phoneNumber = document.querySelector('#tel');
 const numberError = document.querySelector('.tel-error');
 phoneNumber.addEventListener('input', function(){
-let numberRegex = RegExp('^\\d{1,3}\s\\d{10})$');
+let numberRegex = RegExp("^[91][0-9]{10}$");
 if (numberRegex.test(phoneNumber.value))
     numberError.textContent = " ";
  else 
     numberError.textContent = "Invalid Phone Number";
 });
 
-const salary = document.querySelector('#salary');
-const output = document.querySelector('.salary-ouput');
-output.textContent = salary.value;
-salary.addEventListener('input', function(){
-output.textContent = salary.value;
+const password = document.querySelector('#pwd');
+const passwordError = document.querySelector('.pwd-error');
+password.addEventListener('input', function() {
+let passwordRegex = RegExp("^[a-zA-z]{8,}$");
+if (passwordRegex.test(password.value)) 
+    passwordError.textContent = "";
+ else 
+    passwordError.textContent = "Invalid Paasword";
 });
+
